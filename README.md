@@ -42,16 +42,16 @@
 
 ```mermaid
 flowchart LR
-    U[用户浏览器] --> V[PromptHub Web UI\nVercel Static]
-    A[AI 编辑器\nCursor/VS Code/Cline] --> M[/api/mcp]
+    U[用户浏览器] --> V["PromptHub Web UI<br/>Vercel Static"]
+    A["AI 编辑器<br/>Cursor/VS Code/Cline"] --> M["/api/mcp"]
 
-    V --> API[/api/*\nVercel Function\nExpress]
+    V --> API["/api/*<br/>Vercel Function<br/>Express"]
     M --> API
 
     API --> DB[(Supabase PostgreSQL)]
 
-    API --> H[/api/healthz]
-    API --> K[/api/keepalive]
+    API --> H["/api/healthz"]
+    API --> K["/api/keepalive"]
 ```
 
 ---
@@ -80,7 +80,7 @@ npm i -g pnpm
 
 ### 1. 创建 Supabase 免费数据库
 
-1. 登录 Supabase，新建一个 **Free** 项目。
+1. 登录 Supabase，新建一个 **免费** 项目。
 2. 等待项目创建完成（通常几分钟）。
 3. 进入 **Project Settings → Database → Connection string**。
 4. 找到 **Transaction pooler**（推荐）连接串，复制下来（通常是 6543 端口）。
