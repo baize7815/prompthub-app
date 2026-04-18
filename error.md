@@ -43,3 +43,5 @@
 - **Solution**: 改用新仓库名 `prompthub-app` 创建公开仓库，并继续执行发布流程。
 - **Verification**:
   - `create_repository(name=prompthub-app, private=false)` ✅
+  - `git commit`（root commit, 212 files）✅
+  - `git push -u origin main` ✅
