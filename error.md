@@ -45,3 +45,15 @@
   - `create_repository(name=prompthub-app, private=false)` ✅
   - `git commit`（root commit, 212 files）✅
   - `git push -u origin main` ✅
+
+## 2026-04-18 README 对外展示版重写
+
+- **Task**: 将 README 改为对外展示风格，加入小白部署指南（Vercel + Supabase 免费方案）、演示占位、Mermaid 架构图与 FAQ。
+- **Error**: 无
+- **Status**: ✅ Resolved
+- **Cause**: _N/A_
+- **Solution**: 完整重写 `README.md`，重点前置“10分钟部署”，补充环境变量表、部署后验证、MCP 调用示例与常见问题。
+- **Verification**:
+  - `README.md` 已包含 Mermaid 架构图 ✅
+  - 截图仍使用相对路径 `./ScreenShot/*.png` ✅
+  - Vercel + Supabase 小白步骤已落地 ✅
