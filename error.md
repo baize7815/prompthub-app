@@ -57,3 +57,14 @@
   - `README.md` 已包含 Mermaid 架构图 ✅
   - 截图仍使用相对路径 `./ScreenShot/*.png` ✅
   - Vercel + Supabase 小白步骤已落地 ✅
+
+## 2026-04-18 MCP token 写权限放开
+
+- **Task**: 按最简方案改为“现有 MCP token 直接可写”，不再要求 owner cookie 才能 `create_prompt`。
+- **Error**: 首次执行 `pnpm --filter @workspace/api-server run typecheck` 报错：`tsc` 命令不可用。
+- **Status**: ✅ Resolved
+- **Cause**: 本地未安装 workspace 依赖，`typescript` 二进制未就绪。
+- **Solution**: 先执行 `pnpm install` 安装依赖，再重新执行 api-server typecheck。
+- **Verification**:
+  - `pnpm install` ✅
+  - `pnpm --filter @workspace/api-server run typecheck` ✅
