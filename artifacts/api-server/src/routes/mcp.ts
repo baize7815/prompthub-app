@@ -15,7 +15,7 @@ import {
   createPrompt,
   DuplicateTitleError,
 } from "../lib/promptsStore";
-import { isMcpAuthorized, isOwnerRequest } from "../lib/auth";
+import { isMcpAuthorized } from "../lib/auth";
 
 function formatPromptMarkdown(p: {
   title: string;
@@ -256,7 +256,7 @@ async function handle(req: Request, res: Response) {
     return;
   }
   try {
-    const server = await buildServer(isOwnerRequest(req));
+    const server = await buildServer(true);
     const transport = new StreamableHTTPServerTransport({
       sessionIdGenerator: undefined, // stateless
     });
