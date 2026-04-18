@@ -1,0 +1,30 @@
+{
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "buildCommand": "pnpm install --frozen-lockfile && pnpm --filter @workspace/api-server run build && BASE_PATH=/ pnpm --filter @workspace/prompthub run build",
+  "outputDirectory": "artifacts/prompthub/dist/public",
+  "installCommand": "pnpm install --frozen-lockfile",
+  "functions": {
+    "api/index.mjs": {
+      "maxDuration": 10
+    }
+  },
+  "routes": [
+    {
+      "src": "^/api(?:/(.*))?$",
+      "dest": "/api/index.mjs"
+    },
+    {
+      "handle": "filesystem"
+    },
+    {
+      "src": "/(.*)",
+      "dest": "/index.html"
+    }
+  ],
+  "crons": [
+    {
+      "path": "/api/keepalive",
+      "schedule": "17 4 * * *"
+    }
+  ]
+}
