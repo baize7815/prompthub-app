@@ -28,13 +28,13 @@
 ## 项目截图
 
 ### 提示词库主页
-![提示词库主页](./ScreenShot/ScreenShot_2026-04-18_103558_361.png)
+![提示词库主页](./ScreenShot/ScreenShot_2026-04-18_103502_560.png)
 
 ### 新绘画页面
 ![新绘画页面](./ScreenShot/ScreenShot_2026-04-18_103521_681.png)
 
 ### MCP 设置弹窗
-![MCP 设置弹窗](./ScreenShot/ScreenShot_2026-04-18_103502_560.png)
+![MCP 设置弹窗](./ScreenShot/ScreenShot_2026-04-18_103558_361.png)
 
 ---
 
